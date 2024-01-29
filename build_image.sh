@@ -32,6 +32,6 @@ sudo docker login $IP:8081 -u admin -p Harbor12345
 sudo docker push $IP:8081/library/webserver:latest
 
 sed 's/192\.168\.0\.[0-9]\{1,3\}\:8081\/library\/webserver\:latest/'"$IP"'\:8081\/library\/webserver\:latest/g' -i tmp.yaml
-microk8s enable metallb:192.168.1.100-192.168.1.110
+microk8s enable metallb:192.168.0.100-192.168.0.110
 microk8s kubectl delete -f tmp.yaml
 microk8s kubectl apply -f tmp.yaml

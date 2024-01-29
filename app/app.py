@@ -21,7 +21,7 @@ while check == False:
 
 @app.route("/")
 def main():
-  return "Welcome!<br><a href='/hay'>How are you?</a><br><a href='/lire'>Read</a><br><a href='/form'>Add</a><br>"
+  return "Welcome!<br><a href='/hay'>How are you?</a><br><a href='/lire'>Read</a><br><a href='/form'>Add</a><br><p> Bonsoir</p>"
 
 @app.route("/hay")
 def hello():
