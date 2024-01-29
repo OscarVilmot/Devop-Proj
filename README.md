@@ -2,7 +2,7 @@
 
 ## Prerequisite
 
-Kubernetes installed and configured on your machine(s).
+Kubernetes installed and configured on your machine(s). This project is created around microk8s, please ensure microk8s is installed or you will have to edit the script.
 
 ## How to use
 
