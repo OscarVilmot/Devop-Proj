@@ -4,9 +4,15 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-cnx = connection.MySQLConnection(user="root", password="root",
+check = False
+while check == False:
+  try:
+    cnx = connection.MySQLConnection(user="root", password="root",
                                  host=os.environ["MYSQL_HOST"],
                                  database="employees")
+    check = True
+  except:
+    check = False
 
 cursor = cnx.cursor()
 cursor.execute("CREATE TABLE IF NOT EXISTS employees (emp_no INT, first_name VARCHAR(255), last_name VARCHAR(255), hire_date DATE)")
