@@ -10,15 +10,14 @@ while check == False:
     cnx = connection.MySQLConnection(user="root", password="root",
                                  host=os.environ["MYSQL_HOST"],
                                  database="employees")
+    cursor = cnx.cursor()
+    cursor.execute("CREATE TABLE IF NOT EXISTS employees (emp_no INT, first_name VARCHAR(255), last_name VARCHAR(255), hire_date DATE)")
+
+    cursor.close()
+    cnx.close()
     check = True
   except:
     check = False
-
-cursor = cnx.cursor()
-cursor.execute("CREATE TABLE IF NOT EXISTS employees (emp_no INT, first_name VARCHAR(255), last_name VARCHAR(255), hire_date DATE)")
-
-cursor.close()
-cnx.close()
 
 @app.route("/")
 def main():
