@@ -41,7 +41,7 @@ def form():
     return """
       <form action="/afd" method="POST">
       <label for="emp_no">emp_no:</label><br>
-      <input type="text" id="emp_no" name="emp_no"><br>
+      <input type="number" id="emp_no" name="emp_no"><br>
       <label for="first_name">first_name:</label><br>
       <input type="text" id="first_name" name="first_name"><br>
       <label for="last_name">last_name:</label><br>
