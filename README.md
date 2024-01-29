@@ -28,5 +28,9 @@ If microk8s is installed the script will add the harbor server in the "trusted" 
 
 #### Image building
 
-The script will build the image and push it to the harbor repository
+The script will build the image and push it to the harbor repository.
+
+#### Deployment
+
+Finally, the script will apply the steps described in the k8s.yaml file
 
